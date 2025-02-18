@@ -1,9 +1,11 @@
 app_name = "moo_custom_pos"
-app_title = "Moo Custom Pos"
+app_title = "Moo Custom POS"
 app_publisher = "Manot L."
-app_description = "Customize ERPNext\'s POS"
+app_description = "Customize ERPNext's POS"
+app_icon = "octicon octicon-file-directory"
+app_color = "grey"
 app_email = "moocoding@gmail.com"
-app_license = "mit"
+app_license = "MIT"
 
 # Apps
 # ------------------
@@ -22,6 +24,13 @@ app_license = "mit"
 # ]
 
 # Includes in <head>
+app_include_js = ["/assets/moo_custom_pos/js/pos/moo_custom_pos.js"]
+
+# Include custom page
+page_js = {"moo-custom-pos": "public/js/pos/moo_custom_pos.js"}
+
+# Install hooks
+after_install = "moo_custom_pos.setup.after_install"
 # ------------------
 
 # include js, css files in header of desk.html
@@ -241,4 +250,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
